@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RulesEspresso.Library", "RulesEspresso.Library\RulesEspresso.Library.csproj", "{B43E8DEA-187D-4552-A2E8-A3EDB8084882}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RulesEspresso.Test", "RulesEspresso.Test\RulesEspresso.Test.csproj", "{5D86473D-4AB4-499F-AB70-AE32E3FDE410}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B43E8DEA-187D-4552-A2E8-A3EDB8084882}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B43E8DEA-187D-4552-A2E8-A3EDB8084882}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B43E8DEA-187D-4552-A2E8-A3EDB8084882}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B43E8DEA-187D-4552-A2E8-A3EDB8084882}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D86473D-4AB4-499F-AB70-AE32E3FDE410}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D86473D-4AB4-499F-AB70-AE32E3FDE410}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D86473D-4AB4-499F-AB70-AE32E3FDE410}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D86473D-4AB4-499F-AB70-AE32E3FDE410}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

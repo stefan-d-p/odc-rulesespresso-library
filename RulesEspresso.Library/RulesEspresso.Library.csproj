@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>Without.Systems.RulesEspresso</RootNamespace>
+        <AssemblyName>Without.Systems.RulesEspresso.Library</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="DynamicExpresso.Core" Version="2.19.2" />
+        <PackageReference Include="JsonSchema.Net" Version="7.3.4" />
+        <PackageReference Include="OutSystems.ExternalLibraries.SDK" Version="1.5.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Resources\Rules.png" />
+      <EmbeddedResource Include="Resources\Rules.png" />
+    </ItemGroup>
+
+</Project>
