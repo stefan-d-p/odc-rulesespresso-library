@@ -2,9 +2,9 @@
 using System.Text.Json.Nodes;
 using DynamicExpresso;
 using DynamicExpresso.Exceptions;
-using Json.Schema;
 using Without.Systems.RulesEspresso.Exceptions;
 using Without.Systems.RulesEspresso.Structures;
+using NJsonSchema;
 
 namespace Without.Systems.RulesEspresso;
 
@@ -36,9 +36,9 @@ public class RulesEspresso : IRulesEspresso
     private void ValidateJsonSchema(string? jsonSchema, JsonNode dataNode)
     {
         if (string.IsNullOrWhiteSpace(jsonSchema)) return;
-        var schema = JsonSchema.FromText(jsonSchema);
-        var result = schema.Evaluate(dataNode, new EvaluationOptions { OutputFormat = OutputFormat.List });
-        if (!result.IsValid) throw new Exception("JSON schema validation failed");
+        var schema = JsonSchema.FromJsonAsync(jsonSchema).GetAwaiter().GetResult();
+        var errors = schema.Validate(dataNode.ToJsonString());
+        if (errors.Count > 0) throw new Exception("JSON schema validation failed");
     }
 
     private List<Parameter> ExtractParameters(JsonNode dataNode)

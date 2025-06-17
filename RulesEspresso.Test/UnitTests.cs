@@ -16,6 +16,7 @@ public class Tests
     public void Rule_Eval()
     {
         string data = File.ReadAllText("Samples/data.json");
+        string schema = File.ReadAllText("Samples/schema.json");
         var rules = new List<RuleDefinition>
         {
             new RuleDefinition()
@@ -49,6 +50,6 @@ public class Tests
             }
         };
         
-        var result = _actions.EvaluateRules(data, rules);
+        var result = _actions.EvaluateRules(data, rules, schema);
     }
 }
